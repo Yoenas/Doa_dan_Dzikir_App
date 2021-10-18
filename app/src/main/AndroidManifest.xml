@@ -13,21 +13,40 @@
         tools:ignore="AllowBackup">
         <activity
             android:name=".ui.detail.DzikirPetangActivity"
-            android:theme="@style/PetangActivity" />
+            android:screenOrientation="portrait"
+            android:theme="@style/PetangActivity"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.detail.DzikirPagiActivity"
-            android:theme="@style/PagiActivity" />
+            android:screenOrientation="portrait"
+            android:theme="@style/PagiActivity"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.detail.DetailArtikelActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".ui.QauliyahShalatActivity" />
-        <activity android:name=".ui.HarianDzikirDoaActivity" />
-        <activity android:name=".ui.SetiapSaatDzikirActivity" />
-        <activity android:name=".ui.PagiPetangDzikirActivity" />
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.QauliyahShalatActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.HarianDzikirDoaActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.SetiapSaatDzikirActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.PagiPetangDzikirActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/SplashTheme">
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
