@@ -10,24 +10,14 @@ import com.example.doadandzikirapp.model.DataDzikirDoa
 import com.example.doadandzikirapp.model.DzikirDoa
 
 class DzikirPagiActivity : AppCompatActivity() {
-
-    private lateinit var rvDzikirPagi: RecyclerView
-
-    private var listDzikirPagi: ArrayList<DzikirDoa> = arrayListOf()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(R.layout.activity_dzikir_pagi)
 
-        rvDzikirPagi = findViewById(R.id.rv_dzikir_pagi)
-
-        listDzikirPagi.clear()
-        listDzikirPagi.addAll(DataDzikirDoa.listDzikirPagi)
-
+        val rvDzikirPagi = findViewById<RecyclerView>(R.id.rv_dzikir_pagi)
         rvDzikirPagi.layoutManager = LinearLayoutManager(this)
-        rvDzikirPagi.adapter = DzikirDoaAdapter(listDzikirPagi)
-        rvDzikirPagi.setHasFixedSize(true)
+        rvDzikirPagi.adapter = DzikirDoaAdapter(DataDzikirDoa.listDzikirPagi)
     }
 
     override fun onSupportNavigateUp(): Boolean {
