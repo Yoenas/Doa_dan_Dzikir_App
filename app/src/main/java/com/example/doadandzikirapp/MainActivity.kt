@@ -36,14 +36,14 @@ class MainActivity : AppCompatActivity() {
             for (dot in 0 until dotsCount) {
                 dotsSlider[dot]?.setImageDrawable(
                     ContextCompat.getDrawable(
-                        applicationContext, R.drawable.non_active_dot
+                        applicationContext, R.drawable.dot_inactive
                     )
                 )
             }
 
             dotsSlider[position]?.setImageDrawable(
                 ContextCompat.getDrawable(
-                    applicationContext, R.drawable.active_dot
+                    applicationContext, R.drawable.dot_active
                 )
             )
         }
@@ -84,9 +84,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun initData() {
         // bagian artikel
-        val image = resources.obtainTypedArray(R.array.img_artikel)
-        val title = resources.getStringArray(R.array.title_artikel)
-        val desc = resources.getStringArray(R.array.desc_artikel)
+        val image = resources.obtainTypedArray(R.array.arr_img_artikel)
+        val title = resources.getStringArray(R.array.arr_title_artikel)
+        val desc = resources.getStringArray(R.array.arr_desc_artikel)
 
         artikelArray.clear()
         for (data in title.indices) {
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
             dotsSlider[i] = ImageView(this)
             dotsSlider[i]?.setImageDrawable(
                 ContextCompat.getDrawable(
-                    applicationContext, R.drawable.non_active_dot
+                    applicationContext, R.drawable.dot_inactive
                 )
             )
             val params = LinearLayout.LayoutParams(
@@ -141,7 +141,7 @@ class MainActivity : AppCompatActivity() {
 
         dotsSlider[0]?.setImageDrawable(
             ContextCompat.getDrawable(
-                applicationContext, R.drawable.active_dot
+                applicationContext, R.drawable.dot_active
             )
         )
     }

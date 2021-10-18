@@ -18,7 +18,15 @@
             android:name=".ui.detail.DzikirPagiActivity"
             android:theme="@style/PagiActivity" />
         <activity
+            android:name=".ui.detail.DetailArtikelActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".ui.QauliyahShalatActivity" />
+        <activity android:name=".ui.HarianDzikirDoaActivity" />
+        <activity android:name=".ui.SetiapSaatDzikirActivity" />
+        <activity android:name=".ui.PagiPetangDzikirActivity" />
+        <activity
             android:name=".SplashScreenActivity"
+            android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,13 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.detail.DetailArtikelActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".ui.QauliyahShalatActivity" />
-        <activity android:name=".ui.HarianDzikirDoaActivity" />
-        <activity android:name=".ui.SetiapSaatDzikirActivity" />
-        <activity android:name=".ui.PagiPetangDzikirActivity" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"

@@ -3,5 +3,5 @@
     android:id="@+id/img_artikel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:src="@drawable/artikel_1"
-    android:transitionName="artikel" />
+    android:contentDescription="@string/content_txt_image_artikel"
+    android:src="@drawable/artikel_1" />

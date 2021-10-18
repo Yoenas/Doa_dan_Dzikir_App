@@ -29,4 +29,9 @@ class DetailArtikelActivity : AppCompatActivity() {
         tvTitle.text = dataArtikel.titleArtikel
         tvDesc.text = dataArtikel.descArtikel
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }

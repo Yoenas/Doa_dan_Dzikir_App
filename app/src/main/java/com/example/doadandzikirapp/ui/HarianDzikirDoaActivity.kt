@@ -26,11 +26,11 @@ class HarianDzikirDoaActivity : AppCompatActivity() {
         rvDzikirDoaHarian.setHasFixedSize(true)
     }
 
-    fun initData() {
+    private fun initData() {
         // bagian dzikir & doa harian
-        val desc = resources.getStringArray(R.array.dzikir_doa_harian)
-        val lafaz = resources.getStringArray(R.array.lafaz_dzikir_doa_harian)
-        val terjemah = resources.getStringArray(R.array.terjemah_dzikir_doa_harian)
+        val desc = resources.getStringArray(R.array.arr_desc_artikel)
+        val lafaz = resources.getStringArray(R.array.arr_lafaz_dzikir_doa_harian)
+        val terjemah = resources.getStringArray(R.array.arr_terjemah_dzikir_doa_harian)
 
         dzikirDoaHarianArray.clear()
         for (data in desc.indices) {

@@ -12,13 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginStart="8dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/txt_bar_dashboard"
+        android:fontFamily="@font/arabic_arihna"
+        android:text="@string/app_name"
         android:textColor="@color/blue"
         android:textSize="32sp"
         android:textStyle="bold" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!--region Fitur Artikel-->
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/vp_artikel"
                 android:layout_width="match_parent"
@@ -40,11 +41,13 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"
                 android:orientation="horizontal" />
+            <!--endregion-->
 
+            <!--region Fitur Dzikir & Doa-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bg_main_menu"
+                android:background="@drawable/bg_dashboard_menu"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -52,12 +55,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/txt_kumpulan_doa_dan_dzikir_sehari_hari"
+                    android:fontFamily="@font/arabic_arihna"
+                    android:text="@string/txt_judul_fitur"
                     android:textColor="@color/blue"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+                <!--                Sunnah Qauliyah Dzikir & Doa Shalat-->
                 <LinearLayout
                     android:id="@+id/ll_dzikir_doa_shalat"
                     android:layout_width="match_parent"
@@ -70,7 +74,7 @@
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:contentDescription="@string/txt_desc_icon_qauliyah_shalat"
+                        android:contentDescription="@string/content_txt_icon_qauliyah_shalat"
                         android:src="@drawable/ic_doa" />
 
                     <TextView
@@ -84,6 +88,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
+                <!--                Dzikir Setiap Saat-->
                 <LinearLayout
                     android:id="@+id/ll_dzikir_setiap_saat"
                     android:layout_width="match_parent"
@@ -96,7 +101,7 @@
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:contentDescription="@string/txt_desc_icon_dzikir_setiap_saat"
+                        android:contentDescription="@string/content_txt_icon_dzikir_setiap_saat"
                         android:src="@drawable/ic_time" />
 
                     <TextView
@@ -110,7 +115,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-
+                <!--                Dzikir & Doa Harian-->
                 <LinearLayout
                     android:id="@+id/ll_dzikir_doa_harian"
                     android:layout_width="match_parent"
@@ -123,7 +128,7 @@
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:contentDescription="@string/txt_desc_icon_dzikir_harian"
+                        android:contentDescription="@string/content_txt_icon_dzikir_doa_harian"
                         android:src="@drawable/ic_dzikir" />
 
                     <TextView
@@ -137,6 +142,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
+                <!--                Dzikir Pagi & Petang-->
                 <LinearLayout
                     android:id="@+id/ll_dzikir_pagi_petang"
                     android:layout_width="match_parent"
@@ -148,7 +154,7 @@
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:contentDescription="@string/txt_desc_icon_dzikir_pagi_petang"
+                        android:contentDescription="@string/content_txt_icon_dzikir_pagi_petang"
                         android:src="@drawable/ic_pagi_petang" />
 
                     <TextView
@@ -162,6 +168,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
+            <!--endregion-->
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

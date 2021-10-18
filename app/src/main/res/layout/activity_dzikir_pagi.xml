@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp"
+    android:padding="16dp"
     tools:context=".ui.detail.DzikirPagiActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -12,6 +12,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_rv_dzikir_pagi"
-        android:padding="8dp"
-        tools:listitem="@layout/row_item_doa" />
+        android:padding="16dp" />
 </LinearLayout>

@@ -8,9 +8,10 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="gray">#E6E8F5</color>
 
+    <color name="gray">#E6E8F5</color>
     <color name="blue_gray">#AEBEE5</color>
+
     <color name="blue">#153372</color>
     <color name="dot_blue">#012F50</color>
 

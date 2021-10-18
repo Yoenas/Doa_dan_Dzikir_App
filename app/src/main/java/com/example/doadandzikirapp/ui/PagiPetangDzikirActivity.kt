@@ -21,18 +21,18 @@ class PagiPetangDzikirActivity : AppCompatActivity(), View.OnClickListener {
         cvDzikirPagi.setOnClickListener(this)
         val cvDzikirPetang = findViewById<CardView>(R.id.cv_dzikir_petang)
         cvDzikirPetang.setOnClickListener(this)
-        val btnDzikirPagi = findViewById<ImageButton>(R.id.btn_dzikir_pagi)
+        val btnDzikirPagi = findViewById<ImageButton>(R.id.img_btn_dzikir_pagi)
         btnDzikirPagi.setOnClickListener(this)
-        val btnDzikirPetang = findViewById<ImageButton>(R.id.btn_dzikir_petang)
+        val btnDzikirPetang = findViewById<ImageButton>(R.id.img_btn_dzikir_petang)
         btnDzikirPetang.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.cv_dzikir_pagi -> startActivity(Intent(this, DzikirPagiActivity::class.java))
-            R.id.btn_dzikir_pagi -> startActivity(Intent(this, DzikirPagiActivity::class.java))
+            R.id.img_btn_dzikir_pagi -> startActivity(Intent(this, DzikirPagiActivity::class.java))
             R.id.cv_dzikir_petang -> startActivity(Intent(this, DzikirPetangActivity::class.java))
-            R.id.btn_dzikir_petang -> startActivity(Intent(this, DzikirPetangActivity::class.java))
+            R.id.img_btn_dzikir_petang -> startActivity(Intent(this, DzikirPetangActivity::class.java))
         }
     }
 

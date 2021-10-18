@@ -18,7 +18,7 @@ class DzikirDoaAdapter(private val listDzikirDoa: ArrayList<DzikirDoa>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MyViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.row_item_doa, parent, false)
+        LayoutInflater.from(parent.context).inflate(R.layout.row_item_dzikir_doa, parent, false)
     )
 
     override fun getItemCount() = listDzikirDoa.size
