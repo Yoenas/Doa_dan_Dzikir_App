@@ -36,7 +36,7 @@ object DataDzikirDoa {
         "\"Allah Maha Mendengar orang yang memuji-Nya. bagi-Mu-lah segenap pujian yang baik dan penuh berkah. Sebagaimana yang disukai Rabb kami dan di-ridhai-Nya.\"",
         "\"Ya Allah, ampunilah aku, sayangilah aku, cukupilah kekuranganku, tunjukilah aku dan karuniakanlah rizki kepadaku.\"",
         "\"Ya, Allah. Berilah (yakni, tambahkanlah) shalawat (sanjungan) kepada Muhammad dan kepada keluarga Muhammad, sebagaimana Engkau telah memberi shalawat kepada Ibrahim dan kepada keluarga Ibrahim, sesungguhnya Engkau Maha Terpuji (lagi) Maha Mulia. Ya, Allah. Berilah berkah (tambahan kebaikan) kepada Muhammad dan kepada keluarga Muhammad, sebagaimana Engkau telah memberi berkah kepada Ibrahim dan kepada keluarga Ibrahim, sesungguhnya Engkau Maha Terpuji (lagi) Maha Mulia.\"",
-        "\"Segala penghormatan hanya bagi Allah. Begitupula seluruh pengagungan dan kebaikan. Semoga kesejahteraan terlimpahkan atas engkau, wahai Nabi. Begitupula kasih sayang Allah dan berkah-Nya. Mudah-mudahan kesejahteraan tercurahkan atas kita semua dan para hamba Allah yang shalih. Aku bersaksi tidak ada ilah yang layak diibadahi selain Allah. Dan aku bersaksi bahwa Muhammad adalah hamba dan Rasul-Nya. Setelah itu, hendaklah salah seorang di antara kalian memilih do'a yang paling ia sukai lalu hendaklah ia berdo'a kepada Rabb-nya Azza wa Jalla.\n",
+        "\"Segala penghormatan hanya bagi Allah. Begitupula seluruh pengagungan dan kebaikan. Semoga kesejahteraan terlimpahkan atas engkau, wahai Nabi. Begitupula kasih sayang Allah dan berkah-Nya. Mudah-mudahan kesejahteraan tercurahkan atas kita semua dan para hamba Allah yang shalih. Aku bersaksi tidak ada ilah yang layak diibadahi selain Allah. Dan aku bersaksi bahwa Muhammad adalah hamba dan Rasul-Nya. Setelah itu, hendaklah salah seorang di antara kalian memilih do'a yang paling ia sukai lalu hendaklah ia berdo'a kepada Rabb-nya Azza wa Jalla.\"",
         "Salam yang pertama:\n\"Semoga kesejahteraan terlimpahkan atas kamu sekalian, begitu pula rahmat Allah dan berkah-Nya.\n\nSalam yang kedua:\n\"Semoga kesejahteraan dan rahmat Allah tercurahkan kepada kamu sekalian\""
     )
 
@@ -44,10 +44,11 @@ object DataDzikirDoa {
         get() {
             val list = arrayListOf<DzikirDoa>()
             for (position in descQauliyah.indices) {
-                val qauliyah = DzikirDoa()
-                qauliyah.desc = descQauliyah[position]
-                qauliyah.lafaz = lafazQauliyah[position]
-                qauliyah.terjemah = terjemahQauliyah[position]
+                val qauliyah = DzikirDoa(
+                    descQauliyah[position],
+                    lafazQauliyah[position],
+                    terjemahQauliyah[position]
+                )
                 list.add(qauliyah)
             }
             return list
@@ -87,10 +88,11 @@ object DataDzikirDoa {
         get() {
             val list = arrayListOf<DzikirDoa>()
             for (data in descDzikir.indices) {
-                val dzikir = DzikirDoa()
-                dzikir.desc = descDzikir[data]
-                dzikir.lafaz = lafazDzikir[data]
-                dzikir.terjemah = terjemahDzikir[data]
+                val dzikir = DzikirDoa(
+                    descDzikir[data],
+                    lafazDzikir[data],
+                    terjemahDzikir[data]
+                )
                 list.add(dzikir)
             }
             return list
@@ -166,10 +168,11 @@ object DataDzikirDoa {
         get() {
             val list = arrayListOf<DzikirDoa>()
             for (data in descDzikirPagi.indices) {
-                val dzikirDoa = DzikirDoa()
-                dzikirDoa.desc = descDzikirPagi[data]
-                dzikirDoa.lafaz = lafazDzikirPagi[data]
-                dzikirDoa.terjemah = terjemahDzikirPagi[data]
+                val dzikirDoa = DzikirDoa(
+                    descDzikirPagi[data],
+                    lafazDzikirPagi[data],
+                    terjemahDzikirPagi[data]
+                )
                 list.add(dzikirDoa)
             }
             return list
@@ -242,10 +245,11 @@ object DataDzikirDoa {
         get() {
             val list = arrayListOf<DzikirDoa>()
             for (data in descDzikirPetang.indices) {
-                val dzikir = DzikirDoa()
-                dzikir.desc = descDzikirPetang[data]
-                dzikir.lafaz = lafazDzikirPetang[data]
-                dzikir.terjemah = terjemahDzikirPetang[data]
+                val dzikir = DzikirDoa(
+                    descDzikirPetang[data],
+                    lafazDzikirPetang[data],
+                    terjemahDzikirPetang[data]
+                )
                 list.add(dzikir)
             }
             return list

@@ -11,26 +11,19 @@ import com.example.doadandzikirapp.model.DzikirDoa
 
 class QauliyahShalatActivity : AppCompatActivity() {
 
-    private lateinit var rvQauliyah: RecyclerView
-    private var listQauliyah: ArrayList<DzikirDoa> = arrayListOf()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         setContentView(R.layout.activity_qauliyah_shalat)
-        rvQauliyah = findViewById(R.id.rv_qauliyah_shalat)
 
-        listQauliyah.clear()
-        listQauliyah.addAll(DataDzikirDoa.listQauliyah)
-
+        val rvQauliyah = findViewById<RecyclerView>(R.id.rv_qauliyah_shalat)
         rvQauliyah.layoutManager = LinearLayoutManager(this)
-        rvQauliyah.adapter = DzikirDoaAdapter(listQauliyah)
-        rvQauliyah.setHasFixedSize(true)
+
+        rvQauliyah.adapter = DzikirDoaAdapter(DataDzikirDoa.listQauliyah)
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        finish()
+        onBackPressed()
         return super.onSupportNavigateUp()
     }
 }

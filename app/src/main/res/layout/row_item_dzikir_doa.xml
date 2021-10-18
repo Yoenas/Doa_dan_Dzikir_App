@@ -2,10 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
     android:background="@drawable/bg_item"
-    android:orientation="vertical"
-    android:paddingBottom="8dp">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv_desc"
@@ -41,6 +40,7 @@
         android:fontFamily="sans-serif"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
         android:textColor="@color/blue"
         android:textSize="16sp"
         android:textStyle="italic" />

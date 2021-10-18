@@ -10,24 +10,14 @@ import com.example.doadandzikirapp.model.DataDzikirDoa
 import com.example.doadandzikirapp.model.DzikirDoa
 
 class DzikirPetangActivity : AppCompatActivity() {
-
-    private lateinit var rvDzikirPetang: RecyclerView
-
-    private var listDzikirPetang: ArrayList<DzikirDoa> = arrayListOf()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(R.layout.activity_dzikir_petang)
 
-        rvDzikirPetang = findViewById(R.id.rv_dzikir_petang)
-
-        listDzikirPetang.clear()
-        listDzikirPetang.addAll(DataDzikirDoa.listDzikirPetang)
-
+        val rvDzikirPetang = findViewById<RecyclerView>(R.id.rv_dzikir_petang)
         rvDzikirPetang.layoutManager = LinearLayoutManager(this)
-        rvDzikirPetang.adapter = DzikirDoaAdapter(listDzikirPetang)
-        rvDzikirPetang.setHasFixedSize(true)
+        rvDzikirPetang.adapter = DzikirDoaAdapter(DataDzikirDoa.listDzikirPetang)
     }
 
     override fun onSupportNavigateUp(): Boolean {
