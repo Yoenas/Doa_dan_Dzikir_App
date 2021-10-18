@@ -24,8 +24,9 @@ class DzikirDoaAdapter(private val listDzikirDoa: ArrayList<DzikirDoa>) :
     override fun getItemCount() = listDzikirDoa.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tvDesc.text = listDzikirDoa[position].desc
-        holder.tvBacaan.text = listDzikirDoa[position].lafaz
-        holder.tvTerjemah.text = listDzikirDoa[position].terjemah
+        val qauliyah = listDzikirDoa[position]
+        holder.tvDesc.text = qauliyah.desc
+        holder.tvBacaan.text = qauliyah.lafaz
+        holder.tvTerjemah.text = qauliyah.terjemah
     }
 }

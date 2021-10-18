@@ -44,11 +44,10 @@ object DataDzikirDoa {
         get() {
             val list = arrayListOf<DzikirDoa>()
             for (position in descQauliyah.indices) {
-                val qauliyah = DzikirDoa(
-                    descQauliyah[position],
-                    lafazQauliyah[position],
-                    terjemahQauliyah[position]
-                )
+                val qauliyah = DzikirDoa()
+                qauliyah.desc = descQauliyah[position]
+                qauliyah.lafaz = lafazQauliyah[position]
+                qauliyah.terjemah = terjemahQauliyah[position]
                 list.add(qauliyah)
             }
             return list
@@ -88,11 +87,10 @@ object DataDzikirDoa {
         get() {
             val list = arrayListOf<DzikirDoa>()
             for (data in descDzikir.indices) {
-                val dzikir = DzikirDoa(
-                    descDzikir[data],
-                    lafazDzikir[data],
-                    terjemahDzikir[data]
-                )
+                val dzikir = DzikirDoa()
+                dzikir.desc = descDzikir[data]
+                dzikir.lafaz = lafazDzikir[data]
+                dzikir.terjemah = terjemahDzikir[data]
                 list.add(dzikir)
             }
             return list
@@ -168,11 +166,10 @@ object DataDzikirDoa {
         get() {
             val list = arrayListOf<DzikirDoa>()
             for (data in descDzikirPagi.indices) {
-                val dzikirDoa = DzikirDoa(
-                    descDzikirPagi[data],
-                    lafazDzikirPagi[data],
-                    terjemahDzikirPagi[data]
-                )
+                val dzikirDoa = DzikirDoa()
+                dzikirDoa.desc = descDzikirPagi[data]
+                dzikirDoa.lafaz = lafazDzikirPagi[data]
+                dzikirDoa.terjemah = terjemahDzikirPagi[data]
                 list.add(dzikirDoa)
             }
             return list
@@ -245,11 +242,10 @@ object DataDzikirDoa {
         get() {
             val list = arrayListOf<DzikirDoa>()
             for (data in descDzikirPetang.indices) {
-                val dzikir = DzikirDoa(
-                    descDzikirPetang[data],
-                    lafazDzikirPetang[data],
-                    terjemahDzikirPetang[data]
-                )
+                val dzikir = DzikirDoa()
+                dzikir.desc = descDzikirPetang[data]
+                dzikir.lafaz = lafazDzikirPetang[data]
+                dzikir.terjemah = terjemahDzikirPetang[data]
                 list.add(dzikir)
             }
             return list
