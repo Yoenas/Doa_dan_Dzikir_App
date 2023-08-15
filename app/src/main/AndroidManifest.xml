@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.doadandzikirapp">
+    package="com.idn.doadandzikirapp">
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DoadanDzikirApp"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".ui.detail.DzikirPetangActivity"
+            android:name="com.idn.doadandzikirapp.ui.detail.DzikirPetangActivity"
             android:screenOrientation="portrait"
             android:theme="@style/PetangActivity"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.detail.DzikirPagiActivity"
+            android:name="com.idn.doadandzikirapp.ui.detail.DzikirPagiActivity"
             android:screenOrientation="portrait"
             android:theme="@style/PagiActivity"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.detail.DetailArtikelActivity"
+            android:name="com.idn.doadandzikirapp.ui.detail.DetailArtikelActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.QauliyahShalatActivity"
+            android:name="com.idn.doadandzikirapp.ui.QauliyahShalatActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.HarianDzikirDoaActivity"
+            android:name="com.idn.doadandzikirapp.ui.HarianDzikirDoaActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.SetiapSaatDzikirActivity"
+            android:name="com.idn.doadandzikirapp.ui.SetiapSaatDzikirActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.PagiPetangDzikirActivity"
+            android:name="com.idn.doadandzikirapp.ui.PagiPetangDzikirActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
+
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="com.idn.doadandzikirapp.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme"
+            android:theme="@style/Theme.SplashScreenBase"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,11 +54,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoActionBar"
-            tools:ignore="LockedOrientationActivity" />
     </application>
 
 </manifest>
